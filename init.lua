@@ -1,0 +1,5 @@
+require("config.keys")
+require("config.window")
+require("config.general")
+require("config.lazy")
+require("config.rooter")
