@@ -27,6 +27,9 @@ return {
 				},
 				use_libuv_file_watcher = true,
 				bind_to_cwd = true, -- sync Neo-tree root <-> vim cwd :contentReference[oaicite:3]{index=3}
+				filtered_items = {
+					visible = true, -- this option will force the visibility of hidden files :contentReference[oaicite:1]{index=1}
+				},
 
 				cwd_target = {
 					sidebar = "tab", -- left/right sidebar uses tab-local cwd :contentReference[oaicite:4]{index=4}
