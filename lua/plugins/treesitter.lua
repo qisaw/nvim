@@ -32,6 +32,11 @@ return {
 
 				-- DB / tools
 				"prisma",
+
+				-- For AI tools
+				"yaml",
+				"markdown",
+				"markdown_inline",
 			},
 
 			auto_install = true, -- installs missing parsers when you open a filetype
