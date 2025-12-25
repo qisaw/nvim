@@ -63,6 +63,14 @@ return {
 
 			vim.lsp.config("eslint", {
 				capabilities = capabilities,
+				settings = {
+					eslint = {
+						-- Critical for monorepos / nested apps (e.g. apps/web):
+						workingDirectory = { mode = "auto" },
+						-- If you're on ESLint v9 flat config, turn this on:
+						useFlatConfig = true,
+					},
+				},
 			})
 
 			vim.lsp.config("lua_ls", {
@@ -94,12 +102,12 @@ return {
 
 			-- Enable them
 			vim.lsp.enable("ts_ls")
-			vim.lsp.enable("eslint")
 			vim.lsp.enable("lua_ls")
 			vim.lsp.enable("terraformls")
 			vim.lsp.enable("dockerls")
 			vim.lsp.enable("docker_compose_language_service")
 			vim.lsp.enable("prismals")
+			vim.lsp.enable("eslint")
 		end,
 	},
 }
