@@ -22,18 +22,18 @@ return {
 		end,
 	},
 	{
-		"neanias/everforest-nvim",
-		name = "everforest",
-		priority = 1000,
+		"uloco/bluloco.nvim",
 		lazy = false,
+		priority = 1000,
+		dependencies = { "rktjmp/lush.nvim" },
 		config = function()
-			require("everforest").setup({
-				background = "soft",
+			require("bluloco").setup({
+				style = "light", -- "auto" | "dark" | "light"
 			})
 
 			local function set_theme()
 				if vim.o.background == "light" then
-					vim.cmd.colorscheme("everforest")
+					vim.cmd.colorscheme("bluloco")
 				else
 					vim.cmd.colorscheme("catppuccin-frappe")
 				end
