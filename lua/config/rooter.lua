@@ -15,6 +15,10 @@ local function set_root()
 		return
 	end
 
+	if vim.bo[buf].filetype == "NeogitStatus" then
+		return
+	end
+
 	-- don't run root detection when entering neo-tree itself
 	if vim.bo[buf].filetype == "neo-tree" then
 		return
