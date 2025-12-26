@@ -20,6 +20,10 @@ local function set_root()
 		return
 	end
 
+	if vim.bo[buf].filetype == "codecompanion" then
+		return
+	end
+
 	local root = vim.fs.root(name, { "package.json", ".git", "pnpm-workspace.yaml" })
 	if root and root ~= vim.fn.getcwd() then
 		vim.cmd.tcd(root) -- tab-local cwd
