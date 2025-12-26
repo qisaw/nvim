@@ -10,7 +10,7 @@ return {
 		lazy = false, -- neo-tree will lazily load itself
 
 		keys = {
-			{ "<C-n>", "<Cmd>Neotree toggle<CR>", desc = "Neo-tree: Toggle" },
+			{ "<C-o>", "<Cmd>Neotree toggle<CR>", desc = "Neo-tree: Toggle" },
 		},
 
 		opts = {

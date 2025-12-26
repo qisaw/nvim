@@ -77,11 +77,27 @@ return {
 					opts = { completion_provider = "cmp" },
 				},
 			},
+			extensions = {
+				history = {
+					enabled = true,
+					opts = {
+						auto_generate_title = true,
+						title_generation_opts = {
+							adapter = {
+								name = "openai",
+								model = "gpt-4o-mini",
+							},
+						},
+						picker = "fzf-lua",
+					},
+				},
+			},
 		},
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 			"nvim-treesitter/nvim-treesitter",
 			"ravitemer/mcphub.nvim",
+			"ravitemer/codecompanion-history.nvim",
 		},
 	},
 }
