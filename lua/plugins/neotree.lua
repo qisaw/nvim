@@ -21,6 +21,19 @@ return {
 				},
 			},
 			filesystem = {
+				components = {
+					name = function(config, node, state)
+						local comps = require("neo-tree.sources.common.components")
+						local item = comps.name(config, node, state)
+						if node:get_depth() == 1 then
+							local root = state.path or ""
+							local child = vim.fs.basename(root)
+							local parent = vim.fs.basename(vim.fs.dirname(root))
+							item.text = parent ~= "" and (parent .. "/" .. child) or child
+						end
+						return item
+					end,
+				},
 				follow_current_file = {
 					enabled = true,
 					leave_dirs_open = false,
