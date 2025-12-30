@@ -72,6 +72,10 @@ return {
 			require("fzf-lua").lsp_references()
 		end, { desc = "LSP: References (fzf)" })
 
+		vim.keymap.set("n", "<leader>g", function()
+			require("fzf-lua").grep_cWORD()
+		end, { desc = "GREP Word" })
+
 		vim.diagnostic.config({
 			signs = { text = signs },
 			underline = true,
