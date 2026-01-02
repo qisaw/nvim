@@ -47,6 +47,11 @@ return {
 			[vim.diagnostic.severity.HINT] = "",
 		}
 
+		local function project_root()
+			local root = vim.fn.systemlist("git -C " .. vim.fn.expand("%:p:h") .. " rev-parse --show-toplevel")[1]
+			return (vim.v.shell_error == 0 and root ~= "") and root or vim.loop.cwd()
+		end
+
 		-- error popup for line
 		vim.keymap.set("n", "<leader>d", function()
 			vim.diagnostic.open_float(nil, { focus = false, border = "rounded" })
@@ -73,8 +78,12 @@ return {
 		end, { desc = "LSP: References (fzf)" })
 
 		vim.keymap.set("n", "<leader>g", function()
-			require("fzf-lua").grep_cWORD()
+			require("fzf-lua").grep_cword()
 		end, { desc = "GREP Word" })
+
+		vim.keymap.set("n", "<leader>gp", function()
+			require("fzf-lua").live_grep({ cwd = project_root() })
+		end)
 
 		vim.diagnostic.config({
 			signs = { text = signs },
