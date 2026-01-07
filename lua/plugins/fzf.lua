@@ -81,7 +81,7 @@ return {
 			require("fzf-lua").grep_cword()
 		end, { desc = "GREP Word" })
 
-		vim.keymap.set("n", "<leader>gp", function()
+		vim.keymap.set("n", "<C-u>", function()
 			require("fzf-lua").live_grep({ cwd = project_root() })
 		end)
 
