@@ -21,6 +21,9 @@ return {
 						luasnip.lsp_expand(args.body)
 					end,
 				},
+				completion = {
+					completeopt = "menu,menuone,noselect",
+				},
 				mapping = cmp.mapping.preset.insert({
 					["<C-Space>"] = cmp.mapping.complete(),
 					["<CR>"] = cmp.mapping.confirm({ select = true }),

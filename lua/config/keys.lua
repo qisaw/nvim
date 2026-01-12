@@ -70,9 +70,6 @@ map("n", "<leader><space>", ":b#<CR>", { noremap = true, silent = true })
 -- Insert / Terminal / Misc
 ---------------------------------------------------------------------------
 
--- In insert mode: <leader><leader><space> → omni-complete
-map("i", "<leader><leader><space>", "<C-x><C-o>", { noremap = true })
-
 -- In terminal: <leader><leader>q → exit to normal mode
 map("t", "<leader><leader>q", [[<C-\><C-n>]], { noremap = true })
 
