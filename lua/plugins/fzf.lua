@@ -73,6 +73,10 @@ return {
 			require("fzf-lua").lsp_definitions()
 		end, { desc = "LSP: Definitions (fzf)" })
 
+		vim.keymap.set("n", "gt", function()
+			require("fzf-lua").lsp_typedefs()
+		end, { desc = "LSP: Type Definitions (fzf)" })
+
 		vim.keymap.set("n", "gr", function()
 			require("fzf-lua").lsp_references()
 		end, { desc = "LSP: References (fzf)" })
