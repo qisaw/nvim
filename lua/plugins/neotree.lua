@@ -41,7 +41,12 @@ return {
 				use_libuv_file_watcher = true,
 				bind_to_cwd = true, -- sync Neo-tree root <-> vim cwd :contentReference[oaicite:3]{index=3}
 				filtered_items = {
-					visible = true, -- this option will force the visibility of hidden files :contentReference[oaicite:1]{index=1}
+					visible = false, -- this option will force the visibility of hidden files :contentReference[oaicite:1]{index=1}
+					hide_by_name = { "node_modules", "dist" },
+					hide_dotfiles = false,
+					hide_hidden = false,
+					hide_gitignored = false,
+					hide_ignored = false,
 				},
 
 				cwd_target = {

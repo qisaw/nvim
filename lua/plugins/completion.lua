@@ -75,7 +75,7 @@ return {
 				inline = {
 					adapter = {
 						name = "openai",
-						model = "gpt-5.2",
+						model = "gpt-5.4",
 					},
 					opts = { completion_provider = "cmp" },
 				},
@@ -88,7 +88,7 @@ return {
 						title_generation_opts = {
 							adapter = {
 								name = "openai",
-								model = "gpt-4o-mini",
+								model = "gpt-5-mini",
 							},
 						},
 						picker = "fzf-lua",
