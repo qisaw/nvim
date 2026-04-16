@@ -48,7 +48,7 @@ vim.api.nvim_create_autocmd("FileType", {
 			local win = vim.api.nvim_get_current_win()
 			vim.wo[win].foldmethod = "expr"
 			vim.wo[win].foldexpr = "v:lua.vim.treesitter.foldexpr()"
-			vim.wo[win].foldenable = true -- disable folding by default
+			vim.wo[win].foldenable = true -- enable folding by default
 			vim.wo[win].foldlevel = 99 -- open all folds by default
 		end
 	end,
