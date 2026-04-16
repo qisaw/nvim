@@ -26,6 +26,7 @@ vim.lsp.enable("ts_ls")
 vim.lsp.enable("eslint")
 vim.lsp.enable("terraformls")
 vim.lsp.enable("docker_language_server")
+vim.lsp.enable("prismals")
 
 vim.api.nvim_create_autocmd("LspAttach", {
 	callback = function(ev)
