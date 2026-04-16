@@ -3,7 +3,7 @@
 This repository contains my personal Neovim configuration files.
 
 ## Requirements
-- Neovim 0.11 or higher
+- Neovim 0.12 or higher
 - Git
 - Nerd Font for correct icon rendering. I use [JetBrains Mono Nerd Font](https://www.nerdfonts.com/font-downloads). I used [homebrew](https://formulae.brew.sh/cask/font-jetbrains-mono-nerd-font) to install this.
 - [LazyVim](https://www.lazyvim.org/) as the base configuration framework.
