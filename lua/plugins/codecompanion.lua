@@ -8,7 +8,8 @@ vim.pack.add({
 	{ src = "https://github.com/ravitemer/mcphub.nvim" },
 	{ src = "https://github.com/ravitemer/codecompanion-history.nvim" },
 
-	-- cpm for code-companion only
+	-- using nvim-cpm completion for code-companion only as
+	-- built in completion is not supported by codecompanion yet
 	{ src = "https://github.com/hrsh7th/nvim-cmp" },
 	{ src = "https://github.com/hrsh7th/cmp-path" },
 	{ src = "https://github.com/hrsh7th/cmp-buffer" },
