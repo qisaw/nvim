@@ -43,3 +43,5 @@ opt.undodir = vim.fn.expand("$HOME/.vim/undo")
 
 opt.undolevels = 1000
 opt.undoreload = 10000
+
+opt.winborder = 'rounded'
