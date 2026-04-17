@@ -25,7 +25,7 @@
       "src": "https://github.com/ravitemer/codecompanion-history.nvim"
     },
     "codecompanion.nvim": {
-      "rev": "cea5b18c3446ff8d9d44547238bf35b2e5cd2565",
+      "rev": "cdc69269cf4878983604d5c8093e2963753d1cfe",
       "src": "https://github.com/olimorris/codecompanion.nvim"
     },
     "conform.nvim": {
@@ -41,7 +41,7 @@
       "src": "https://github.com/sindrets/diffview.nvim"
     },
     "fzf-lua": {
-      "rev": "4be0a6923a64dc411489b57b77a6bf6f30404e66",
+      "rev": "83f7195972538beee3a40932b38ccd86c8cc0f06",
       "src": "https://github.com/ibhagwan/fzf-lua"
     },
     "gitsigns.nvim": {
