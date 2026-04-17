@@ -7,6 +7,7 @@ opt.backupcopy = "yes"
 opt.tabstop = 2
 opt.shiftwidth = 2
 opt.expandtab = true
+opt.softtabstop = 2
 
 -- wrapping
 opt.wrap = false
