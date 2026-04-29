@@ -1,7 +1,7 @@
 This git repository contains my neovim configuration files and related scriptss.
 
 # Neovim Configuration
-I use Neovim as my primary text editor for code. I use Lazy.nvim as my plugin manager and have configured various plugins to enhance my coding experience.
+I use Neovim as my primary text editor for code. I use vim.pack as my plugin manager and have configured various plugins to enhance my coding experience.
 
 I mostly work with the following programming languages:
 - Typescript
