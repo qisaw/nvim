@@ -79,7 +79,7 @@ require("codecompanion").setup({
 		inline = {
 			adapter = {
 				name = "openai",
-				model = "gpt-5.4",
+				model = "gpt-5.5",
 			},
 			opts = { completion_provider = "cmp" },
 		},
