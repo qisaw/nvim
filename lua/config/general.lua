@@ -46,3 +46,8 @@ opt.undolevels = 1000
 opt.undoreload = 10000
 
 opt.winborder = "rounded"
+
+-- allow for faster pack updates
+vim.api.nvim_create_user_command("PackUpdate", function()
+	vim.pack.update()
+end, {})
