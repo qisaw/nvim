@@ -12,6 +12,8 @@ require("conform").setup({
 		typescriptreact = { "prettierd", "prettier", stop_after_first = true },
 		css = { "prettierd", "prettier", stop_after_first = true },
 		html = { "prettierd", "prettier", stop_after_first = true },
+		terraform = { "terraform_fmt" },
+		["terraform-vars"] = { "terraform_fmt" },
 	},
 	-- Set default options
 	default_format_opts = {
