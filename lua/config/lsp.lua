@@ -24,7 +24,10 @@ vim.lsp.config("lua_ls", {
 vim.lsp.enable("lua_ls")
 vim.lsp.enable("ts_ls")
 vim.lsp.enable("eslint")
-vim.lsp.enable("terraformls")
+-- disable terraformls for now as it causes freezes
+-- https://github.com/hashicorp/terraform-ls/pull/2122
+-- Waiting for the above PR to be merged
+-- vim.lsp.enable("terraformls")
 vim.lsp.enable("docker_language_server")
 vim.lsp.enable("prismals")
 
