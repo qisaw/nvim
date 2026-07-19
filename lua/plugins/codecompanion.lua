@@ -78,8 +78,8 @@ require("codecompanion").setup({
 		},
 		inline = {
 			adapter = {
-				name = "openai",
-				model = "gpt-5.5",
+				name = "openai_responses",
+				model = "gpt-5.6-sol",
 			},
 			opts = { completion_provider = "cmp" },
 		},
