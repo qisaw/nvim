@@ -2,7 +2,23 @@ vim.pack.add({
 	{ src = "https://github.com/ibhagwan/fzf-lua" },
 	{ src = "https://github.com/nvim-tree/nvim-web-devicons" }, -- optional
 })
-require("fzf-lua").setup({})
+
+local actions = require("fzf-lua.actions")
+
+require("fzf-lua").setup({
+	files = {
+		no_ignore = false,
+		actions = {
+			["ctrl-r"] = { actions.toggle_ignore },
+		},
+	},
+	grep = {
+		no_ignore = false,
+		actions = {
+			["ctrl-r"] = { actions.toggle_ignore },
+		},
+	},
+})
 
 local signs = {
 	[vim.diagnostic.severity.ERROR] = "",

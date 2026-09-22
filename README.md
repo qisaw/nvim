@@ -2,6 +2,8 @@
 
 This repository contains my personal Neovim configuration files.
 
+The configuration is organized under `lua/config` and `lua/plugins`.
+
 ## Requirements
 - Neovim 0.12 or higher
 - Git

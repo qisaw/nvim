@@ -59,12 +59,9 @@ vim.api.nvim_create_autocmd("FileType", {
 			},
 			mapping = cmp.mapping.preset.insert({
 				["<C-Space>"] = cmp.mapping.complete(),
-				["<C-e>"] = cmp.mapping.abort(),
 				["<CR>"] = cmp.mapping.confirm({ select = true }),
 				["<Tab>"] = cmp.mapping(select_next_or_complete, { "i", "s" }),
 				["<S-Tab>"] = cmp.mapping(select_prev_or_complete, { "i", "s" }),
-				["<C-n>"] = cmp.mapping(select_next_or_complete, { "i", "s" }),
-				["<C-p>"] = cmp.mapping(select_prev_or_complete, { "i", "s" }),
 			}),
 		}, args.buf)
 	end,
@@ -72,6 +69,14 @@ vim.api.nvim_create_autocmd("FileType", {
 
 require("codecompanion").setup({
 	interactions = {
+		shared = {
+			keymaps = {
+				view_diff = { modes = { n = "<C-v>" } },
+				accept_change = { modes = { n = "<C-y>" } },
+				reject_change = { modes = { n = "<C-n>" } },
+				cancel = { modes = { n = "<C-x>" } },
+			},
+		},
 		chat = {
 			adapter = "codex",
 			opts = { completion_provider = "cmp" },
