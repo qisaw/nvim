@@ -13,6 +13,9 @@ vim.pack.add({
 	{ src = "https://github.com/hrsh7th/nvim-cmp" },
 	{ src = "https://github.com/hrsh7th/cmp-path" },
 	{ src = "https://github.com/hrsh7th/cmp-buffer" },
+
+	-- markdown
+	{ src = "https://github.com/MeanderingProgrammer/render-markdown.nvim" },
 })
 
 local cmp = require("cmp")
@@ -112,4 +115,8 @@ require("codecompanion").setup({
 			},
 		},
 	},
+})
+
+require("render-markdown").setup({
+	file_types = { "markdown", "codecompanion" },
 })
