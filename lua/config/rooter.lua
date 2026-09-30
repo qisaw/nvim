@@ -14,6 +14,9 @@ local function set_root()
 	if name == "" then
 		return
 	end
+	if vim.bo[buf].buftype ~= "" then
+		return
+	end
 
 	if vim.bo[buf].filetype == "NeogitStatus" then
 		return

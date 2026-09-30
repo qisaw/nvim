@@ -16,7 +16,6 @@ require("mason-tool-installer").setup({
 	ensure_installed = {
 		"prettierd",
 		"stylua",
-		"codex-acp",
 	},
 	auto_update = false,
 	run_on_start = true,

@@ -33,7 +33,10 @@ require("neo-tree").setup({
 			end,
 		},
 		follow_current_file = {
-			enabled = true,
+			-- Neo-tree resolves the buffer name before checking 'buftype'. A
+			-- CodeCompanion ACP chat can use the whole prompt as its buffer name,
+			-- which makes that resolution fail with ENAMETOOLONG.
+			enabled = false,
 			leave_dirs_open = false,
 		},
 		use_libuv_file_watcher = true,
@@ -55,6 +58,23 @@ require("neo-tree").setup({
 })
 
 require("lsp-file-operations").setup()
+
+-- Keep follow_current_file behaviour, but only pass real file buffers to
+-- Neo-tree. In particular, ignore named `nofile` buffers such as CodeCompanion.
+vim.api.nvim_create_autocmd("BufEnter", {
+	callback = function(args)
+		if vim.bo[args.buf].buftype ~= "" then
+			return
+		end
+
+		local path = vim.api.nvim_buf_get_name(args.buf)
+		if path == "" or not vim.uv.fs_stat(path) then
+			return
+		end
+
+		require("neo-tree.sources.filesystem").follow()
+	end,
+})
 
 vim.keymap.set("n", "<C-o>", function()
 	vim.cmd.Neotree("toggle")
